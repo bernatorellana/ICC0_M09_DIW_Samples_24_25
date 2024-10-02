@@ -1,0 +1,48 @@
+
+html {
+         height:100%;
+
+         .capsa {
+            width: 25%;
+            background-color: red;
+            padding-top: 50px;
+            position:fixed;
+            bottom:0%;
+            right:0%;
+            box-sizing: border-box;
+            text-align: center;
+                        
+            &:hover li {
+                height: 10px;
+                padding: 10px;
+                opacity: 100%;
+            }
+
+            &:after{
+                content:"";
+                display: block;
+                width: 0px;
+                height: 0px;
+                border: 20px solid black;
+                border-top-color:white;
+                border-left-color:white;
+                position: absolute;
+                top:0px;
+                left:0px;
+             }
+
+             ul {
+                li {
+                    transition: all 1s linear;
+                    padding: 10px;
+                    border:1px solid black;
+                    height: 0px;
+                    overflow: hidden;
+                    padding: 0px;
+                    opacity: 0%;
+                }
+             }
+         }
+
+         
+}
