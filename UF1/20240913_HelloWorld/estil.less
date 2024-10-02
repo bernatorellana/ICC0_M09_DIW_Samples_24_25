@@ -1,0 +1,124 @@
+
+
+@color_fons:rgba(67, 117, 167, 1);
+
+html {
+    font-family: arial;
+    font-size: 14px;
+    background-color:#1c881c;
+    background-image: url(https://picsum.photos/800/600);
+}
+
+
+#i_win {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    main .capsa  {
+        background-color: @color_fons;
+        padding: 10px;//TRiBL
+        padding-right: 30px;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin:20px;
+        width: 50%;
+        box-sizing: border-box;
+
+
+        .triangle {
+            display: block;
+            width: 0px;
+            height: 0px;
+            border:40px solid transparent;       
+            margin:0px auto;
+        }
+        .down {
+            border-top-color: white;
+        }
+        .up {
+            border-bottom-color: white;
+        }
+
+
+        div {
+            width: 50%;
+            //background-color: white;
+        }
+        a {
+            color:white;
+            display: block;
+            padding: 10px;
+        }
+        a[href^="http://"] {
+            color: red;
+        }
+        a[href^="ftp://"] {
+            color: green;
+        }
+        a[href$=".pdf"], a[href$=".xls"]{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQc_8_G4_Plf3ePEICtocEV62qHoQiX9V8qqmD2gtdiu72DmvnFRieOiUpbJCmM3FaOKs&usqp=CAU);
+            background-size:  contain;
+            background-repeat: no-repeat;
+            padding-left: 50px;
+            background-color: white;
+        }
+
+        a[href$=".xls"]{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy7Rw0YGpjbhlakLV4OaCbrhEpkTm_bmEe2C4VINc9RNhDEtJlOSmFsjHTuV3YuvhcIOQ&usqp=CAU);
+        }
+        a:hover {
+            cursor: crosshair;
+            background-color: aqua  ;
+        }
+
+        a {
+            height:0px;
+            overflow: hidden;
+            padding: 0px;
+            transition: height 1s;
+        }
+    }
+
+    .capsa:hover a {
+        height:20px;
+        transition: height 1s;
+    }
+
+    p::first-letter {
+        font-size:80px;
+        float:left;
+    } 
+
+    table {
+        background-color: white;
+
+
+        tr:nth-child(2n) {
+            background-color: rgb(247, 187, 187);
+        }
+        tr:nth-child(2n+1) {
+            background-color: rgb(252, 235, 235);
+        }  
+    
+        tr:first-child {
+            td {padding: 20px;}
+            background-color: rgb(233, 46, 46);
+        }  
+
+    }
+
+    div {
+        quote:first-of-type{
+            background-color: rgb(233, 46, 46);
+        }
+    }
+
+
+    img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+    }
+}

@@ -1,0 +1,99 @@
+html {
+  font-family: arial;
+  font-size: 14px;
+  background-color: #1c881c;
+  background-image: url(https://picsum.photos/800/600);
+}
+#i_win h1 {
+  font-size: 1.3rem;
+}
+#i_win main .capsa {
+  background-color: #4375a7;
+  padding: 10px;
+  padding-right: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  width: 50%;
+  box-sizing: border-box;
+}
+#i_win main .capsa .triangle {
+  display: block;
+  width: 0px;
+  height: 0px;
+  border: 40px solid transparent;
+  margin: 0px auto;
+}
+#i_win main .capsa .down {
+  border-top-color: white;
+}
+#i_win main .capsa .up {
+  border-bottom-color: white;
+}
+#i_win main .capsa div {
+  width: 50%;
+}
+#i_win main .capsa a {
+  color: white;
+  display: block;
+  padding: 10px;
+}
+#i_win main .capsa a[href^="http://"] {
+  color: red;
+}
+#i_win main .capsa a[href^="ftp://"] {
+  color: green;
+}
+#i_win main .capsa a[href$=".pdf"],
+#i_win main .capsa a[href$=".xls"] {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQc_8_G4_Plf3ePEICtocEV62qHoQiX9V8qqmD2gtdiu72DmvnFRieOiUpbJCmM3FaOKs&usqp=CAU);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+  background-color: white;
+}
+#i_win main .capsa a[href$=".xls"] {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy7Rw0YGpjbhlakLV4OaCbrhEpkTm_bmEe2C4VINc9RNhDEtJlOSmFsjHTuV3YuvhcIOQ&usqp=CAU);
+}
+#i_win main .capsa a:hover {
+  cursor: crosshair;
+  background-color: aqua  ;
+}
+#i_win main .capsa a {
+  height: 0px;
+  overflow: hidden;
+  padding: 0px;
+  transition: height 1s;
+}
+#i_win .capsa:hover a {
+  height: 20px;
+  transition: height 1s;
+}
+#i_win p::first-letter {
+  font-size: 80px;
+  float: left;
+}
+#i_win table {
+  background-color: white;
+}
+#i_win table tr:nth-child(2n) {
+  background-color: #f7bbbb;
+}
+#i_win table tr:nth-child(2n+1) {
+  background-color: #fcebeb;
+}
+#i_win table tr:first-child {
+  background-color: #e92e2e;
+}
+#i_win table tr:first-child td {
+  padding: 20px;
+}
+#i_win div quote:first-of-type {
+  background-color: #e92e2e;
+}
+#i_win img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
