@@ -1,0 +1,19 @@
+html {
+  height: 100%;
+}
+html main {
+  position: fixed;
+  right: 0px;
+  top: 50%;
+  height: 300px;
+  width: 50vw;
+  background-color: aquamarine;
+}
+html .capsa {
+  width: 30%;
+  padding: 20px;
+  background-color: red;
+  position: absolute;
+  top: 15px;
+  left: 30px;
+}
