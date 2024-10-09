@@ -1,4 +1,56 @@
-
 html {
-         height:100%;
+  height: 100%;
+}
+main div {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  height: 80px;
+  border: 1px solid black;
+  background-color: red;
+  padding: 10px;
+}
+main div section {
+  flex: 1;
+}
+main div section h1 {
+  text-align: center;
+}
+main div section h1,
+main div section span,
+main div section img {
+  display: block;
+}
+main div section span {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+main div time {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: bold;
+}
+main div img {
+  width: 40px;
+  height: 40px;
+  margin: 0px auto;
+}
+main > div {
+  position: fixed;
+  top: calc(50% - 40px);
+  left: calc(50% - 50px);
+}
+main > div > footer {
+  position: absolute;
+  top: 120%;
+  left: -50%;
+  display: flex;
+}
+main > div > footer > div > footer {
+  display: none;
 }
