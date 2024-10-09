@@ -3,6 +3,8 @@ html {
 }
 main div {
   position: relative;
+}
+main div header {
   display: flex;
   justify-content: space-around;
   width: 100px;
@@ -42,25 +44,36 @@ main div img {
 }
 main > div {
   position: fixed;
-  top: calc(50% - 40px);
+  top: calc(20% - 40px);
   left: calc(50% - 50px);
 }
 main > div > footer {
-  position: absolute;
-  top: 120%;
-  left: -50%;
   display: flex;
+  height: 100vh;
+  /*&>div:nth-child(1){ // la semi de la esquerra
+            
+            footer {
+                position:absolute;
+                top:(-2 * @alcada );
+                right: 110%;
+            }
+        }
+
+        &>div:nth-child(2){// la semi de la dreta
+            div {
+                margin-top:30px;
+            }
+            footer {
+                position:absolute;
+                top:(-2 * @alcada );
+                left: 110%;
+            }
+        }*/
 }
-main > div > footer > div:nth-child(1) footer {
-  position: absolute;
-  top: -80px;
-  right: 110%;
+main > div > footer div {
+  display: flex;
+  height: 50%;
 }
-main > div > footer > div:nth-child(2) div {
-  margin-top: 30px;
-}
-main > div > footer > div:nth-child(2) footer {
-  position: absolute;
-  top: -80px;
-  left: 110%;
+main > div > footer div header {
+  align-self: center;
 }
