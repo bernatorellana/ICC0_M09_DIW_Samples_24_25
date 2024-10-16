@@ -1,4 +1,45 @@
-
 html {
-         height:100%;
+  height: 100%;
+  font-size: 12px;
+}
+html nav {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  background-color: white;
+  margin-bottom: 20px;
+  border-bottom: 1px solid gray;
+  -webkit-box-shadow: 2px 3px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 3px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 3px 20px 0px rgba(0, 0, 0, 0.75);
+}
+html nav ul {
+  display: flex;
+}
+html nav ul ul {
+  display: none;
+}
+html nav ul li {
+  position: relative;
+  padding: 10px;
+  font-variant: small-caps;
+  background-color: white;
+}
+html nav ul li:hover {
+  background-color: gainsboro;
+}
+html nav ul li:hover > ul {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  border: 1px solid gray;
+  -webkit-box-shadow: 2px 3px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 3px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 3px 20px 0px rgba(0, 0, 0, 0.75);
+}
+html nav ul li:hover > ul li:hover ul {
+  top: 0%;
+  left: 100%;
 }

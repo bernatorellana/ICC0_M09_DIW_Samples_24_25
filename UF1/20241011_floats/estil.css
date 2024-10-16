@@ -1,0 +1,17 @@
+html {
+  padding: 10px;
+  font-size: 12px;
+  height: 100%;
+}
+html section {
+  columns: 3;
+}
+html section img {
+  display: block;
+  float: left;
+  padding: 15px;
+}
+html section img:nth-of-type(2) {
+  float: right;
+  clear: both;
+}
