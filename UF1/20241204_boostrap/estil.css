@@ -1,0 +1,19 @@
+html {
+  height: 100%;
+}
+html .box {
+  background-color: aqua;
+  border: 1px solid black;
+}
+html article {
+  background-color: red;
+}
+html article:nth-child(2) {
+  background-color: #a03434;
+}
+html header {
+  background-color: aqua;
+}
+html .banner {
+  width: 100vw;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html >
+
+<html>
+	<head>
+	    <title>title</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+		<link rel="stylesheet" type="text/css" href="reset.css" />
+		<link rel="stylesheet" type="text/css" href="estil.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+
+	<body>
+		<main>
+			<section class="capsa">
+				<img 
+				loading=""
+				src="img/arch_1600.jpg"
+				srcset="img/arch_4000.jpg 4000w,
+						img/arch_1600.jpg 1600w,
+						img/arch_1336.jpg 1336w,
+						img/arch_1024.jpg 1024w,
+						img/arch_768.jpg 768w
+				"
+				sizes="(min-width: 600px) 50vw,
+	                 100vw "
+				>
+			<figure>		
+				<picture>
+					<source srcset="img/arch_1024_squared.jpg" 
+					media="(min-width:1000px)"  width="400px">
+					<source srcset="img/arch_1336.jpg" 
+					media="(min-width:600px)" width="400px">
+					<img src="img/arch_1600.jpg" width="100%">
+				</picture>
+				<figcaption>Titol de la imatge</figcaption>
+			</figure>
+			</section>    
+		</main>		
+	</body>
+</html>

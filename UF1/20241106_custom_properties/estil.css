@@ -1,0 +1,15 @@
+:root {
+  --color: #f4f442;
+}
+html .capsa {
+  background-image: var(--url-producte);
+  background-color: var(--color);
+  display: block;
+  width: 25%;
+  aspect-ratio: var(--aspect);
+  transform: translateY(200px) var(--scale, scale(1));
+  transition: all 1s;
+}
+html .capsa:hover {
+  --scale: scale(2);
+}

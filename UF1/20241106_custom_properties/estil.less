@@ -1,0 +1,24 @@
+
+
+:root {
+        --color:rgb(244, 244, 66);
+}
+
+html {
+   
+        .capsa{
+                background-image: var(--url-producte);
+
+                background-color: var(--color);
+                display: block;
+                width: 25%;
+                aspect-ratio: var(--aspect); // dividir amplada/alçada
+
+                transform: translateY(200px) var(--scale, scale(1));
+                transition:all 1s;
+                &:hover {
+                        --scale: scale(2);
+                        // scale = 
+                }
+        }
+}

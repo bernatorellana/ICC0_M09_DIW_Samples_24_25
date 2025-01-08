@@ -1,0 +1,124 @@
+@pad: 10px;
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column ;
+    //justify-content: space-between;
+    header{
+        box-sizing: border-box;
+        background-color: lime;
+        padding: @pad;
+        position: relative;
+        #menuHandler {
+            position: absolute;
+            right:10px;
+            top:50%;
+            transform:translateY(-50%);
+         }
+    }
+    
+    nav{
+        transition:height 1s;
+        &.hidden_menu{
+            height: 0px;
+            transition:height 1s;
+        }
+        ul {
+            display: flex;
+            flex-direction: column ;
+            li{
+                flex:1;
+                padding: @pad;
+                border: 1px solid black;
+            }
+        }
+    }
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: column ;
+        max-width: 900px;
+        margin: 0px auto;
+        section {
+            border-top: 6px solid rgb(159, 39, 159);
+        }
+        #contents{
+            order:1;
+            padding: @pad;
+            background-color: rgb(40, 207, 213);
+        }
+
+        #rightc{
+            order:2;
+            padding: @pad;
+            background-color: blueviolet;
+        }
+        #leftc{
+            order:3;
+            padding: @pad;
+            background-color: orange;   
+        }
+    }
+
+    footer{
+        background-color: lime;
+    }
+}
+
+@media (600px<width) {
+
+    #menuHandler{
+        display: none;
+    }
+    #menu {
+        height: auto;
+        ul {
+
+            flex-direction: row ;
+        }
+    }
+   #main {
+    flex-direction: row;
+    flex-wrap: wrap;
+        #contents{
+            order:3;
+        }
+
+        #rightc{
+            box-sizing: border-box;
+            order:2;
+            width: 50%;
+        }
+        #leftc{
+            box-sizing: border-box;
+            width: 50%;
+            order:1;
+        }
+    }
+}
+
+
+@media (900px<width) {
+
+    #main {
+        flex-wrap: nowrap;
+
+        #contents,#rightc, #leftc{
+            
+            width: auto;
+        }
+        #contents{        
+            order:1;
+            flex:2;
+        }
+        #rightc{
+            order:1;
+            flex:1;
+        }
+        #leftc{
+            order:2;
+            flex:0.5;
+        }
+    }
+
+}

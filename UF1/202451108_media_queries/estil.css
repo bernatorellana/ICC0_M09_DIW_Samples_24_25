@@ -1,0 +1,46 @@
+html body {
+  height: 100%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+}
+html body main {
+  display: flex;
+}
+html body main aside {
+  padding: 10px;
+  flex: 1;
+  background-color: aqua;
+}
+html body main .capsa {
+  flex: 3;
+  columns: var(--columnes, 5);
+}
+@media (width < 800px) {
+  html body main {
+    flex-direction: column;
+  }
+  html body main .capsa {
+    order: 0;
+  }
+  html body main aside {
+    order: 1;
+  }
+}
+@media print {
+  body .capsa {
+    background-color: white;
+    color: black;
+  }
+}
+@media all and (orientation: landscape) {
+  body .capsa {
+    --columnes: 3;
+  }
+}
+@media all and (orientation: portrait) {
+  body .capsa {
+    --columnes: 1;
+  }
+}

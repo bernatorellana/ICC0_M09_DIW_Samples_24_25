@@ -1,0 +1,55 @@
+
+
+html body{
+    height:100%;
+
+    background-color: black;
+    color: white;
+    padding:20px;
+    font-size:16px;
+    
+
+    main {
+        display: flex;
+        aside{
+            padding: 10px;
+            flex:1;
+            background-color: aqua;
+        }
+        .capsa {
+            flex:3;
+            columns:var(--columnes, 5);
+        }
+    }
+    @media (width<800px) {
+        main {
+            flex-direction: column;
+            //display: block;
+            .capsa{
+                order:0;
+            }
+            aside {order:1;}
+        }
+     }
+    
+}
+
+body {
+    .capsa {
+        @media print {
+            
+                background-color:white;
+                color: black;
+
+        }
+        @media all and (orientation: landscape) {
+            //columns: 3;
+            --columnes:3;
+        }
+        @media all and (orientation: portrait) {
+            //columns:1;
+            --columnes:1;
+        }   
+    }
+ }
+

@@ -1,0 +1,41 @@
+html {
+  height: 100%;
+  width: 100%;
+  height: 300px;
+  margin: 0px auto;
+}
+html .capsa {
+  height: 300px;
+  display: grid;
+  grid-template-columns: minmax(200px, 2fr) minmax(250px, 5fr) 100px;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas: "head head head" "nav content side" "foot foot foot";
+}
+html .capsa header {
+  background-color: aqua;
+  grid-area: head;
+}
+html .capsa nav {
+  background-image: url("https://picsum.photos/200/300");
+  grid-area: nav;
+}
+html .capsa footer {
+  background-color: #229292;
+  grid-area: foot;
+}
+html .capsa main {
+  background-color: beige;
+  grid-area: content;
+}
+html .capsa aside {
+  background-color: violet;
+  opacity: 0.5;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+@media screen and (width > 500px) {
+  html .capsa {
+    grid-template-columns: minmax(200px, 25fr) minmax(250px, 75fr);
+    grid-template-areas: "nav nav" "head content" "foot foot";
+  }
+}

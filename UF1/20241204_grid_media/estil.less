@@ -1,0 +1,59 @@
+
+html {
+         height:100%;
+            width: 100%;
+            height: 300px;
+            margin: 0px auto;
+         .capsa {
+            height: 300px;
+            display: grid;
+            grid-template-columns: minmax(200px,2fr) minmax(250px,5fr) 100px;
+            grid-template-rows: 100px 1fr 100px;
+            grid-template-areas: 
+            "head head head"
+            "nav content side"
+            "foot foot foot"
+            ;
+        
+            header{
+                background-color: aqua;
+                grid-area: head;
+            }
+            nav{
+                //background-color: green;
+                background-image: url("https://picsum.photos/200/300");
+                grid-area: nav;
+            }
+            footer{
+                background-color: rgb(34, 146, 146);
+                grid-area: foot;
+            }
+            main {
+                background-color: beige;
+                grid-area:content;
+            }
+            aside {
+                //grid-area: side;
+                background-color: violet;
+                opacity: 0.5;
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+        }
+}
+@media screen and (width>500px ){
+    html {
+
+        .capsa {
+
+           grid-template-columns: minmax(200px,25fr) minmax(250px,75fr);
+           //grid-template-rows: 100px 1fr 100px;
+           grid-template-areas: 
+           "nav nav"
+           "head content"
+           "foot foot"
+           ;
+        }
+    }
+}

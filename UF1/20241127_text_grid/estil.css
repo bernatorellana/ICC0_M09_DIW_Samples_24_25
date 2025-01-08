@@ -1,0 +1,18 @@
+main {
+  height: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+}
+main h1 {
+  margin-top: 24px;
+  line-height: 48px;
+  font-size: 1.5rem;
+}
+main img {
+  height: 144px;
+  display: block;
+}
+main .capsa {
+  padding: 20px;
+}

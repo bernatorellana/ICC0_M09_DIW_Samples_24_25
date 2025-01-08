@@ -1,0 +1,26 @@
+html {
+  height: 100%;
+}
+html .capsa {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(200px, 2fr) minmax(250px, 5fr) 100px;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas: "head head head" "nav content content" "foot foot foot";
+}
+html .capsa header {
+  background-color: aqua;
+  grid-area: head;
+}
+html .capsa nav {
+  background-color: green;
+  grid-area: nav;
+}
+html .capsa footer {
+  background-color: #229292;
+  grid-area: foot;
+}
+html .capsa main {
+  background-color: beige;
+  grid-area: content;
+}
