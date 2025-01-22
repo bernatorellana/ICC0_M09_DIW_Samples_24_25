@@ -1,0 +1,66 @@
+@keyframes animacio_rotacio {
+  0% {
+    transform: rotateY(20deg) rotateX(0deg) translateZ(-100px);
+  }
+  100% {
+    transform: rotateY(20deg) rotateX(360deg) translateZ(-100px);
+  }
+}
+html main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+  /*&:hover .cub{
+            transform:rotateY(360deg) rotateX(360deg);
+        }*/
+}
+html main .cub {
+  animation-name: animacio_rotacio;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: all 50s;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+html main .cub div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  opacity: 0.9;
+}
+html main .cub div.front {
+  background-image: linear-gradient(#e3eb0154, #e3eb0154), url(https://picsum.photos/id/1/200);
+  transform: translateZ(200px);
+}
+html main .cub div.back {
+  background-image: linear-gradient(#e3eb0154, #e3eb0154), url(https://picsum.photos/200?1);
+  transform: rotateY(180deg);
+}
+html main .cub div.top {
+  background-image: linear-gradient(#e3eb0154, #e3eb0154), url(https://picsum.photos/200?2);
+  transform-origin: 50% 0%;
+  transform: rotateX(90deg);
+}
+html main .cub div.bottom {
+  background-image: linear-gradient(#e3eb0154, #e3eb0154), url(https://picsum.photos/200?3);
+  transform-origin: 50% 100%;
+  transform: rotateX(-90deg);
+}
+html main .cub div.left {
+  background-image: linear-gradient(#e3eb0154, #e3eb0154), url(https://picsum.photos/200?4);
+  transform-origin: 0% 50%;
+  transform: rotateY(-90deg);
+}
+html main .cub div.right {
+  background-image: linear-gradient(#e3eb0154, #e3eb0154), url(https://picsum.photos/200?5);
+  transform-origin: 100% 50%;
+  transform: rotateY(90deg);
+}

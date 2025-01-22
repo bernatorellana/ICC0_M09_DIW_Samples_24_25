@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+
+<html id="root">
+	<head>
+	    <title>title</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+		<link rel="stylesheet" type="text/css" href="reset.css" />
+		<link rel="stylesheet" type="text/css" href="estil.css" />
+	</head>
+
+	<body >
+		<main id="main">
+			<div id="terra"></div>
+			<div  class="canya segment">
+				<div class="segment">
+					<div class="segment">
+						<div class="segment">
+							<div class="segment">
+								<div class="segment">
+									<div class="segment">
+						
+									</div> 
+								</div> 
+							</div> 
+						</div> 
+					</div> 
+				</div> 
+			</div> 
+		</main>		
+
+	</body>
+
+
+	<script>
+		let c = document.getElementsByClassName("canya")[0];
+		for(let i=0;i<100;i++){
+			let cc = c.cloneNode(true);
+			document.getElementById("main").appendChild(cc); 
+			cc.style.left=(i*40)+"px";
+		}
+	</script>
+</html>

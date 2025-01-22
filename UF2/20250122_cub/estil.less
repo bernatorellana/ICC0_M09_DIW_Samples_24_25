@@ -1,0 +1,82 @@
+
+@mida:200px;
+@color:#e3eb0154;
+
+@keyframes animacio_rotacio {
+    0% {
+        transform:rotateY(20deg) rotateX(0deg) translateZ(-(@mida / 2));     
+    }
+
+    100%{
+        transform:rotateY(20deg) rotateX(360deg) translateZ(-(@mida / 2));
+    }
+}
+
+html {
+         
+
+    main{
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 800px;
+        /*&:hover .cub{
+            transform:rotateY(360deg) rotateX(360deg);
+        }*/
+        .cub{
+            animation-name: animacio_rotacio;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            transition: all 50s;
+            width: @mida;
+            height:@mida;
+            position: relative;
+            transform-style: preserve-3d;
+            div {
+                position: absolute;
+                top:0px;left:0px;
+                width: @mida;
+                height:@mida;
+                background-color: red;
+                opacity: 0.9;
+                &.front{
+                    //background-color: yellow;
+                    background-image:linear-gradient(@color, @color),  url(https://picsum.photos/id/1/200) , 
+                     ; 
+                    transform: translateZ(@mida);
+                }
+                &.back{
+                    background-image: linear-gradient(@color, @color),  url(https://picsum.photos/200?1);
+
+                    transform:rotateY(180deg);
+                }
+                &.top {                    
+                    background-image: linear-gradient(@color, @color),  url(https://picsum.photos/200?2);
+                    transform-origin: 50% 0%;
+                    transform:rotateX(90deg);
+                }
+                &.bottom {
+                    background-image: linear-gradient(@color, @color),  url(https://picsum.photos/200?3);
+                    transform-origin: 50% 100%;
+                    transform:rotateX(-90deg);
+                }
+                &.left {
+                    background-image: linear-gradient(@color, @color),  url(https://picsum.photos/200?4);
+
+                    transform-origin: 0% 50%;
+                    transform:rotateY(-90deg);
+                }
+                &.right { 
+                    background-image: linear-gradient(@color, @color),  url(https://picsum.photos/200?5);
+
+                    transform-origin: 100% 50%;
+                    transform:rotateY(90deg);
+                }
+            }
+            
+        }
+    }
+}

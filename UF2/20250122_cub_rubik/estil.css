@@ -1,0 +1,94 @@
+@keyframes animacio_cara {
+  0% {
+    transform: translateZ(220px) rotate(0deg);
+  }
+  100% {
+    transform: translateZ(220px) rotate(360deg);
+  }
+}
+@keyframes animacio_rotacio {
+  0% {
+    transform: rotateY(20deg) rotateX(0deg) translateZ(-200px);
+  }
+  100% {
+    transform: rotateY(20deg) rotateX(360deg) translateZ(-200px);
+  }
+}
+html main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+}
+html main nav {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  transform-style: preserve-3d;
+  animation-name: animacio_rotacio;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+html main nav aside {
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  gap: 20px;
+}
+html main nav aside.rfront {
+  transform: translateZ(220px);
+  animation-name: animacio_cara;
+  animation-duration: 20s;
+  animation-delay: 10s;
+}
+html main nav aside .cub {
+  transition: all 50s;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+html main nav aside .cub div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 200px;
+  outline: 1px solid black;
+  backface-visibility: hidden;
+}
+html main nav aside .cub div.front {
+  background-color: red;
+  transform: translateZ(200px);
+}
+html main nav aside .cub div.back {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+html main nav aside .cub div.top {
+  background-color: blue;
+  transform-origin: 50% 0%;
+  transform: rotateX(90deg);
+}
+html main nav aside .cub div.bottom {
+  background-color: orange;
+  transform-origin: 50% 100%;
+  transform: rotateX(-90deg);
+}
+html main nav aside .cub div.left {
+  background-color: green;
+  transform-origin: 0% 50%;
+  transform: rotateY(-90deg);
+}
+html main nav aside .cub div.right {
+  background-color: yellow;
+  transform-origin: 100% 50%;
+  transform: rotateY(90deg);
+}
